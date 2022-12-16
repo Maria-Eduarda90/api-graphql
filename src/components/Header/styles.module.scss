@@ -1,0 +1,30 @@
+.header {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+        color: #00601d;
+        text-shadow: 2px 2px 10px #00601d;
+    }
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 4px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
