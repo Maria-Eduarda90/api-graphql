@@ -14,7 +14,7 @@ export function Card({ characters }: PersonType){
                     <p>{characters.results.species}</p>
                 </div>
 
-                <h2>Origirem:</h2>
+                <h2>Origem:</h2>
                 <p>{characters.results.origin.name}</p>
                 
                 <h2>Localização</h2>
