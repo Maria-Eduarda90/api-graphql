@@ -5,9 +5,16 @@ export const INFO_PERSON = gql`
     characters {
       results {
         name
+        status
         species
+        origin {
+          name
+        }
         gender
         image
+        location {
+          name
+        }
       }
     }
   }
