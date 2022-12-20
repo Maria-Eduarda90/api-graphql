@@ -1,25 +1,32 @@
-import { PersonType } from '../../@types/Person';
+import { CharactersType } from '../../@types/Person';
 import styles from './styles.module.scss';
 
-export function Card({ characters }: PersonType){
+export function Card({ characters }: CharactersType){
+    
     return(
         <div>
-            <div>
-                <img src={characters.results.image} alt={characters.results.name} />
-            </div>
-            <div>
-                <h1>{characters.results.name}</h1>
-                <div>
-                    <span>{characters.results.status}</span>
-                    <p>{characters.results.species}</p>
-                </div>
+            {characters.results.map((item, key) => {
+                return (
+                    <>
+                        <div key={key}>
+                            <img src={item.image} alt={item.name} />
+                        </div>
+                        <div>
+                            <h1>{item.name}</h1>
+                            <div>
+                                <span>{item.status}</span>
+                                <p>{item.species}</p>
+                            </div>
 
-                <h2>Origem:</h2>
-                <p>{characters.results.origin.name}</p>
-                
-                <h2>Localização</h2>
-                <p>{characters.results.location.name}</p>
-            </div>
+                            <h2>Origem:</h2>
+                            <p>{item.origin.name}</p>
+
+                            <h2>Localização</h2>
+                            <p>{item.location.name}</p>
+                        </div>
+                    </>
+                );
+            })}
         </div>
     );
 }

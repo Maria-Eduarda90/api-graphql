@@ -6,10 +6,7 @@ export type LocationPersonType = {
   name: string;
 };
 
-export type PersonType = {
-  characters: {
-    results: {
-      id: number;
+export interface PersonType {
       name: string;
       status: string;
       species: string;
@@ -17,6 +14,12 @@ export type PersonType = {
       gender: string;
       image: string;
       location: LocationPersonType;
-    };
-  };
 };
+
+export interface ResultType {
+  results: PersonType[];
+}
+
+export interface CharactersType {
+  characters: ResultType;
+}

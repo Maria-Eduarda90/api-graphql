@@ -4,12 +4,12 @@ import { useQuery } from "@apollo/client";
 import { Header } from './components/Header';
 import { Search } from './components/Search';
 import './styles/global.scss';
-import { PersonType } from './@types/Person';
+import { CharactersType } from './@types/Person';
 import { Card } from './components/Card';
 
 export function App() {
-  const { loading, error, data } = useQuery<{ characters: PersonType[] }>(INFO_PERSON);
-  console.log(data)
+  const { loading, data } = useQuery<{ characters: CharactersType[] }>(INFO_PERSON);
+  console.log(data?.characters)
   
   if(loading) {
     return <p>Loading...</p>
@@ -21,8 +21,13 @@ export function App() {
       <div className="container__app">
         <Search />
       </div>
-      {data?.characters.map((person, index) => <Card key={index} characters={person.characters}/>
-      )}
+      <section>
+        {data?.characters.map((person, key) => {
+          return(
+            <Card key={key} characters={person.characters} />
+          );
+        })}
+      </section>
     </>
   )
 }
