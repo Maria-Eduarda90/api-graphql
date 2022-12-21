@@ -1,5 +1,5 @@
 import { useQuery } from '@apollo/client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { PersonType } from '../../@types/Person';
 import { INFO_PERSON } from '../../graphql';
 import { Search } from '../Search';
