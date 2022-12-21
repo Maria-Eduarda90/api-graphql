@@ -1,0 +1,59 @@
+.container_search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6rem;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-gap: 1.5rem;
+    
+
+    .container {
+        display: flex;
+        gap: 1rem;
+        background: #3a3a3a;
+        border-radius: 8px;
+        height: 14rem;
+        
+        
+        .image {
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 8px 0 0 8px;
+            }
+        }
+
+        .description {
+            padding: 0.8rem 0;
+            h1 {
+                color: #fff;
+                
+            }
+
+            .status {
+                display: flex;
+                align-items: center;
+                color: #fff;
+                gap: 0.4rem;
+            }
+            
+            .OriginLocation {
+                margin-top: 1rem;
+                h2 {
+                    color: #c1bebe;
+                    font-size: 14px;
+                    font-weight: normal;
+                    margin-top: 0.8rem;
+                }
+
+                p {
+                    color: #fff;
+                    margin-top: 0.2rem ;
+                }
+            }
+        }
+    }
+}

@@ -1,15 +1,12 @@
 import { INFO_PERSON } from './graphql';
 import { useQuery } from "@apollo/client";
-
 import { Header } from './components/Header';
 import { Search } from './components/Search';
 import './styles/global.scss';
-import { CharactersType } from './@types/Person';
 import { Card } from './components/Card';
 
 export function App() {
-  const { loading, data } = useQuery<{ characters: CharactersType[] }>(INFO_PERSON);
-  console.log(data?.characters)
+  const { loading } = useQuery(INFO_PERSON);
   
   if(loading) {
     return <p>Loading...</p>
@@ -18,15 +15,25 @@ export function App() {
   return (
     <>
       <Header/>
-      <div className="container__app">
-        <Search />
-      </div>
-      <section>
-        {data?.characters.map((person, key) => {
+      <section className="container__card">
+        {/* {data?.characters.results.map((item, key) => {
           return(
-            <Card key={key} characters={person.characters} />
+            <div>
+              <Card
+                key={key}
+                image={item.image}
+                status={item.status}
+                gender={item.gender}
+                name={item.name}
+                species={item.species}
+                location={item.location}
+                origin={item.origin}
+              />
+            </div>
           );
-        })}
+        })} */}
+
+        <Card />
       </section>
     </>
   )
