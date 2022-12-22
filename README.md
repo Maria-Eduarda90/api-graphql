@@ -16,8 +16,7 @@
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/Maria-Eduarda90/
-api-graphql>
+$ git clone <https://github.com/Maria-Eduarda90/api-graphql>
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd web
