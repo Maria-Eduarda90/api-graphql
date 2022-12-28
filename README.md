@@ -7,6 +7,7 @@
 ## Tecnologias
 
 - GraphQL
+- Apollo Client
 - ReactJS
 - Sass
 - Typescript
